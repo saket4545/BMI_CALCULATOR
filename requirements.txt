@@ -7,3 +7,4 @@ numpy
 mpmath 
 sphinxcontrib-jsmath 
 pip 
+matplotlib
