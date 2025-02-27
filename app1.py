@@ -2,7 +2,6 @@ import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 # Load the saved pipeline
 try:
@@ -46,13 +45,6 @@ if st.button('Predict BMI Category'):
         # Display Prediction
         st.success(f"### Your BMI category is: **{category}**")
         
-        # Visualization
-        fig, ax = plt.subplots()
-        categories_list = list(categories.values())
-        ax.bar(categories_list, [1 if cat == category else 0 for cat in categories_list], color='blue')
-        ax.set_ylabel("BMI Category")
-        ax.set_title("Your BMI Classification")
-        st.pyplot(fig)
-        
     except Exception as e:
         st.error(f"An error occurred: {e}")
+
